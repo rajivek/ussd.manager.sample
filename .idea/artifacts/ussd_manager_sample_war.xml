@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ussd.manager.sample:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="ussd.manager.sample.war">
+      <element id="artifact" artifact-name="ussd.manager.sample:war exploded" />
+    </root>
+  </artifact>
+</component>
