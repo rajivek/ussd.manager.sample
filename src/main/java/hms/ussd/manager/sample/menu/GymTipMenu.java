@@ -11,24 +11,7 @@ import hms.tap.api.ussd.messages.MoUssdReq;
 public class GymTipMenu implements Menu {
 
     public static final String MenuName = GymTipMenu.class.getName();
-    private String nextMenuName;
 
-    @Override
-    public boolean validate(Session session,MoUssdReq moUssdReq) {
-        if ("1".equals(moUssdReq.getMessage())) {
-            nextMenuName = "";
-
-        } else if ("2".equals(moUssdReq.getMessage())) {
-            nextMenuName = "";
-
-        } else if ("3".equals(moUssdReq.getMessage())) {
-            nextMenuName = "";
-
-        } else {
-            return false;
-        }
-        return true;
-    }
 
     @Override
     public String getMenuName() {
@@ -41,7 +24,20 @@ public class GymTipMenu implements Menu {
     }
 
     @Override
-    public String getNextMenu() {
+    public String getNextMenu(Session session,MoUssdReq moUssdReq) {
+
+       String nextMenuName = null;
+        if ("1".equals(moUssdReq.getMessage())) {
+            nextMenuName = "";
+
+        } else if ("2".equals(moUssdReq.getMessage())) {
+            nextMenuName = "";
+
+        } else if ("3".equals(moUssdReq.getMessage())) {
+            nextMenuName = "";
+
+        }
+
         return nextMenuName;
     }
 
